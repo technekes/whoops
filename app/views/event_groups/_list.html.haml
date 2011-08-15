@@ -1,4 +1,4 @@
-= will_paginate(@event_groups)
+= paginate(@event_groups)
 %table.event-group-list
   %thead
     %tr
@@ -16,4 +16,4 @@
       %td= event_group_scoped_link(event_group, :environment)
       %td= event_group.last_recorded_at.to_s(:whoops_default)
       %td= event_group.events.count
-= will_paginate(@event_groups)
+= paginate(@event_groups)

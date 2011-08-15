@@ -6,7 +6,7 @@ module Whoops
     desc 'Installs assets into your public directory.'
     
     def install_assets
-      directory 'assets', 'public/'
+      directory 'assets', 'vendor/assets'
     end
       
     def self.source_root

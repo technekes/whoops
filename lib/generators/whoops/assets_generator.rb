@@ -6,7 +6,8 @@ module Whoops
     desc 'Installs assets into your public directory.'
     
     def install_assets
-      directory 'assets', 'vendor/assets'
+      path = Rails::VERSION::STRING.include?("3.1") ? 'vendor/assets' : 'public/'
+      directory 'assets', path
     end
       
     def self.source_root

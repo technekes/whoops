@@ -5,7 +5,7 @@ class Whoops::EventGroup
   
   attr_accessor :recording_event
   
-  [:service, :environment, :event_type, :message, :identifier, :logging_strategy_name].each do |string_field|
+  [:service, :environment, :event_type, :message, :group_identifier, :logging_strategy_name].each do |string_field|
     field string_field, :type => String
   end
   field :last_recorded_at, :type => DateTime
@@ -14,7 +14,8 @@ class Whoops::EventGroup
 
   has_many :events, :class_name => "Whoops::Event"
   
-  validates_presence_of :identifier, :event_type, :service, :message
+  # validates_presence_of :event_type, :service, :message
+  validates_presence_of :group_identifier, :event_type, :service, :message
   
   after_validation :handle_archival, :send_notifications
   

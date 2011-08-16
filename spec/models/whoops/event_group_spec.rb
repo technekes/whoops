@@ -4,7 +4,7 @@ describe Whoops::EventGroup do
   let(:event_params){Whoops::Spec::ATTRIBUTES[:event_params]}
   let(:event_group_attributes) do
     {
-      :identifier => "1",
+      :group_identifier => "1",
       :event_type => "test",
       :service    => "test",
       :message    => "test"

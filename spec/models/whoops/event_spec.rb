@@ -10,7 +10,7 @@ describe Whoops::Event do
       event_group.event_type.should == event_params[:event_type]
       event_group.service.should == event_params[:service]
       event_group.environment.should == event_params[:environment]
-      event_group.identifier.should == event_params[:event_group_identifier]
+      event_group.group_identifier.should == event_params[:event_group_identifier]
       event_group.message.should == event_params[:message]
     end
     

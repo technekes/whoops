@@ -10,12 +10,9 @@ class EventsController < ApplicationController
       events_base = events_base.where(conditions)
     end
     
-    @events = events_base.desc(:event_time).paginate(
-      :page => params[:page],
-      :per_page => 20
-    )
-    
-    puts 'test'
+    @events = events_base.desc(:event_time).page(
+      params[:page]
+    ).per(20)
   end
   
   def show

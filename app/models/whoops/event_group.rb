@@ -38,11 +38,11 @@ class Whoops::EventGroup
   end
   
   def send_notifications
-    if self.notify_on_next_occurrence && recording_event
-      matcher = Whoops::NotificationRule::Matcher.new(self)
-      Whoops::NotificationMailer.event_notification(self, matcher.matches).deliver
-      self.notify_on_next_occurrence = false
-    end
+    # if self.notify_on_next_occurrence && recording_event
+    #   matcher = Whoops::NotificationRule::Matcher.new(self)
+    #   Whoops::NotificationMailer.event_notification(self, matcher.matches).deliver
+    #   self.notify_on_next_occurrence = false
+    # end
   end
   
   def handle_archival

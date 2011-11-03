@@ -6,7 +6,7 @@ class Whoops::NotificationMailer < ActionMailer::Base
     @event_group = event_group
     @addresses = addresses
     # better option?
-    @host = "http://#{Rails.configuration.action_mailer.default_url_options[:host]}/"
+    @url = "http://#{Rails.configuration.action_mailer.default_url_options[:host]}/event_groups/#{@event_group.id}/events"
     
     mail(
       :to      => addresses.join(", "),

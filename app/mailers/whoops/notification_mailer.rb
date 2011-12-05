@@ -5,7 +5,7 @@ class Whoops::NotificationMailer < ActionMailer::Base
   def event_notification(event_group, *addresses)
     @event_group = event_group
     @addresses = addresses
-    # better option?
+    # better option?  http://excid3.com/blog/change-actionmailer-email-url-host-dynamically/
     @url = "http://#{Rails.configuration.action_mailer.default_url_options[:host]}/event_groups/#{@event_group.id}/events"
     
     mail(

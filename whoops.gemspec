@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.add_dependency('mongo')
   s.add_dependency('bson_ext')
   s.add_dependency('mongoid', '~>2.4')
-  s.add_dependency('kaminari', '0.12.4')
+  s.add_dependency('kaminari', '0.13.0')
   
   s.add_development_dependency('rspec-rails')
   s.add_development_dependency('fabrication')
